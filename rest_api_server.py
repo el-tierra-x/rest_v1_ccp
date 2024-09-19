@@ -121,8 +121,14 @@ def serve_one_file(filename):
 
     return static_file(filename, './farm_animals')
 
+@app.route('/hello', method='GET')
+def hello():
+    return 'Hello'
+           
+
 if __name__ == '__main__': 
     run(app, host='0.0.0.0', port='8088')
+    
 
 #if __name__ == '__main__': 
 #    run(host='localhost', port='8080')
